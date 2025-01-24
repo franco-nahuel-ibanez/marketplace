@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import { AppRouter } from './Router';
@@ -10,7 +10,9 @@ function App() {
     <div>
       <NotificationProvider>
         <BrowserRouter>
-          <AppRouter />
+          <Suspense fallback={"Cargando"}>
+            <AppRouter />
+          </Suspense>
         </BrowserRouter>
       </NotificationProvider>
     </div>

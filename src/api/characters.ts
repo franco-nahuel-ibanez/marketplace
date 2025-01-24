@@ -6,5 +6,9 @@ export const characters = {
     return instance.get(endpoint, {params: {
       page
     }})
+  },
+
+  getById: function ({id} : {id: string | undefined}) {
+    return instance.get(`${endpoint}/${id}`)
   }
 }

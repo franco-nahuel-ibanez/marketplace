@@ -1,0 +1,1 @@
+export {cartSlice} from './card.slices'
